@@ -64,13 +64,26 @@ But since you're already here,
 keep scrolling 😂
 </p>
 
-<audio id="song">
-    <source src="gone-gone-gone.mp3" type="audio/mpeg">
+```html
+<audio id="song" controls preload="auto">
+    <source src="./gone-gone-gone.mp3" type="audio/mpeg">
+    Your browser does not support audio.
 </audio>
 
 <button onclick="playSong()">
 🎵 Play Our Song
 </button>
+
+<script>
+function playSong() {
+    const song = document.getElementById("song");
+    song.play().catch(err => {
+        alert("Audio error: " + err);
+    });
+}
+</script>
+```
+
 
 <h2>🐒 Monkey vs 🐷 Pig</h2>
 
