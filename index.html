@@ -8,6 +8,18 @@ html
 
 <style>
 body{
+    ```html
+<audio id="bgMusic" loop>
+    <source src="Phillip Phillips - Gone, Gone, Gone.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+window.addEventListener("click", function () {
+    document.getElementById("bgMusic").play();
+}, { once: true });
+</script>
+```
+
     margin:0;
     font-family:Arial, sans-serif;
     background:linear-gradient(135deg,#ff758c,#ff7eb3);
